@@ -13,7 +13,7 @@ public class FVCalc {
 
 			int reundedFutureValue = (int) Math.round(futureValue);
 			
-			System.out.println("After " + years + " years, $" + dollars + " saved at " + rate + "% will yield $" + reundedFutureValue);
+			System.out.println("After " + years + " years, $" + dollars + " saved at " + (int)rate + "% will yield $" + reundedFutureValue);
 		
 	}
 	
