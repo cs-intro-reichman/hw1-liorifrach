@@ -10,9 +10,8 @@ public class NumWords {
 	number = Integer.parseInt(args[0]);
 
 	ones = number % 10;
-	hundreds = (number / 100); 
 	tens = ((number % 100) - ones ) / 10;
-	
+	hundreds = (number / 100); 
 
 	System.out.println( hundreds + " hundreds " + tens + " tens, and " + ones + " ones ");
 	
