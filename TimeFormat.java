@@ -5,6 +5,7 @@ public class TimeFormat {
 		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
 		String period = "AM";
+
 		if (hours >= 12){
 			period = "PM";
 			if(hours > 12){
@@ -12,20 +13,11 @@ public class TimeFormat {
 
 			}
 		}
-		else if(hours == 0){
-			hours = 0; // midnight
-			period = "AM";
-		}
-		else{
-			period = "AM";
-		}
-		if (minutes < 10) {
-			System.out.println((hours + ":0" + minutes + " " + period));
-
-		}
-		else{
-			System.out.println(hours + ":" + minutes + " " + period);
-		}
+		
+			System.out.println(hours + ":");
+			System.out.printf("%02d", minutes);
+			System.out.println(" " + period);
+		
 
 		}
 	}
