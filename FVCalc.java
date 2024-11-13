@@ -4,21 +4,17 @@ public class FVCalc {
 	}
 		public static void main(String[] var0){
 
-			int var1 = Integer.parseInt(var0[0]);
-			int var2 = Integer.parseInt(var0[0]);
-			int var3 = Integer.parseInt(var0[0]);
-			int finelamount=var1; 
-			// calculatint the future amount by incrising var1 every year
-			for(int i=0; i<=var3; i++)
-			{
-				finelamount=finelamount + (finelamount*(var3/100));
-			}
-			System.out.println("after" + var2 + "years," + var1+"$, saves at"+var3+"% will yeild "+finelamount+"$");
+			int dollars = Integer.parseInt(var0[0]);
+			double rate = Double.parseDouble(var0[1]);
+			int years = Integer.parseInt(var0[2]);
+			double newrate = rate / 100.0;
+			
+			double futureValue = dollars * ( Math.pow(1 + newrate, years));
 
-		// Replace this comment with your code
+			int reundedFutureValue = (int) Math.round(futureValue);
+			
+			System.out.println("After " + years + " years, $" + dollars + " saved at " + rate + "% will yield $" + reundedFutureValue);
 		
-	
-		int yield = 0; 
 	}
 	
 
