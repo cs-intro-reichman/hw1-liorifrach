@@ -4,16 +4,16 @@ public class FVCalc {
 	}
 		public static void main(String[] var0){
 
-			int dollars = Integer.parseInt(var0[0]);
-			double rate = Double.parseDouble(var0[1]);
-			int years = Integer.parseInt(var0[2]);
-			double newrate = rate / 100.0;
-			
-			double futureValue = dollars * ( Math.pow(1 + newrate, years));
+			int currect = Integer.parseInt(var0[0]);
 
-			int reundedFutureValue = (int) Math.round(futureValue);
+			double rate = Double.parseDouble(var0[1]);
+			int length = Integer.parseInt(var0[2]);
+		
+			double future = 0;
 			
-			System.out.println("After " + years + " years, $" + dollars + " saved at " + (int)rate + "% will yield $" + reundedFutureValue);
+			future = currect * Math.pow(1 + rate / 100 , length);
+			
+			System.out.println("After " + length + " years, $" + currect + " saved at " + rate + "% will yield $" + (int)future);
 		
 	}
 	
